@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.left {
+  height: 50vsh;
+  width: 50vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  padding-right: 15rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.right {
+  height: 50vsh;
+  width: 50vw;
+  background-color: #9747ff;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+}
+
+.logo {
+  font-size: 1.4rem;
+}
+
+.welcomeContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+}
+
+.welcomeContainer h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.logoContainer {
+  width: 100%;
+  padding: 3rem 0;
+}
+
+.logoContainer p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #9747ff;
+}
+
+.inputsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.forgetPassword {
+  color: #9747ff;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.forgetPassword:hover {
+  text-decoration: underline;
+} 
+
+.buttonContainer button {
+  background-color: #9747ff;
+  color: white;
+  transition: 0.5s;
+  height: 3.5rem;
+}
+
+.buttonContainer button:hover {
+  background-color: #9747ff;
+  color: white;
+  opacity: 0.8;
+}
