@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { KeyboardArrowDown } from '@mui/icons-material';
 
 import styles from './styles.module.css';
-import { FormControl, FormControlLabel, FormLabel, Popover, Radio, RadioGroup } from '@mui/material';
+import { FormControl, FormControlLabel, Popover, Radio, RadioGroup } from '@mui/material';
 
 interface Props {
   title: string;

@@ -10,16 +10,24 @@ import { useMemo, useState } from 'react';
 import { filteredList } from '@/utils/filteredList';
 import { User } from '@/types/user';
 import { sortUsers } from '@/utils/sortUsers';
+import { IFilters } from '@/types/filter';
+import { dataMask } from '@/utils/dataFormat';
+import { filterUser } from '@/utils/filterUser';
 
 export default function Users() {
   const { data: users } = useFetch<User[]>('users');
 
   const [search, setSearch] = useState('');
   const [orderBy, setOrderBy] = useState('');
+  const [filters, setFilter] = useState<IFilters[]>([]);
 
   const filteredUser = useMemo(
-    () => filteredList(users || [], search).sort((a: User, b: User) => sortUsers(a, b, orderBy)),
-    [search, users, orderBy]
+    () =>
+      filterUser(
+        filteredList(users || [], search).sort((a: User, b: User) => sortUsers(a, b, orderBy)),
+        filters
+      ),
+    [search, users, orderBy, filters]
   );
 
   const columns: GridColDef[] = useMemo(
@@ -47,6 +55,7 @@ export default function Users() {
         headerName: 'Data de cadastro',
         flex: 1,
         sortable: false,
+        renderCell: ({ value }) => dataMask(value),
       },
       {
         field: 'status',
@@ -72,7 +81,14 @@ export default function Users() {
     <div>
       <Header />
       <div className={styles.container}>
-        <Filters orderBy={orderBy} setOrderBy={setOrderBy} search={search} setSearch={setSearch} />
+        <Filters
+          orderBy={orderBy}
+          setOrderBy={setOrderBy}
+          search={search}
+          setSearch={setSearch}
+          filters={filters}
+          setFilters={setFilter}
+        />
         <div className={styles.tableContainer}>
           <DataGrid
             rows={filteredUser || []}
