@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  align-items: center;
+  color: #9747FF;
+  font-weight: 400;
+  min-width: 10rem;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+}
+
+.optionsContainer {
+  padding: 1rem;
+}

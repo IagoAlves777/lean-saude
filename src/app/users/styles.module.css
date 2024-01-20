@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  gap: 3rem;
+  height: calc(100svh - 64px);
+}
+
+.tableContainer {
+  height: 100%;
+}
+
+.inative {
+  background-color: #fdecec;
+  color: #E53E3E;
+}
+
+.active {
+  background-color: #daf4e3;
+  color: #46855b;
+}

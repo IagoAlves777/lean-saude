@@ -1,20 +1,12 @@
 'use client';
 
-import {
-  Button,
-  FormControl,
-  IconButton,
-  Input,
-  InputAdornment,
-  InputLabel,
-  OutlinedInput,
-  TextField,
-} from '@mui/material';
+import { FormControl, IconButton, InputAdornment, TextField } from '@mui/material';
 import styles from './styles.module.css';
 import { FormEvent, useState } from 'react';
 import { VisibilityOff, Visibility } from '@mui/icons-material';
 import { useRouter } from 'next/navigation';
 import { LoadingButton } from '@mui/lab';
+import Cookie from 'js-cookie';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -48,6 +40,7 @@ export default function Login() {
 
     setTimeout(() => {
       setLoading(false);
+      Cookie.set('token', 'a4deb82573778b87dad81a27aa690ead');
       router.push('/users');
     }, 2000);
   };

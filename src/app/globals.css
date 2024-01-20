@@ -4,6 +4,11 @@
   box-sizing: border-box;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  
+}
+
+body {
+  color:#9D9D9D;
 }
 
 *::before,

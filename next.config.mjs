@@ -12,6 +12,7 @@ const nextConfig = {
   env: {
     EMAIL: process.env.EMAIL,
     PASSWORD: process.env.PASSWORD,
+    BASE_URL: process.env.BASE_URL,
   },
 };
 

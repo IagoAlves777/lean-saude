@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  gap: 3rem;
+}
+
+.filtersRow {
+  display: flex;
+  gap: 2rem;
+}
+
+.filtersRow input {
+  height: 1rem;
+  width: 18.75rem;
+}
+
+.filtersSelect {
+  display: flex;
+  align-items: center;
+}

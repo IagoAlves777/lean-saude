@@ -1,0 +1,76 @@
+.appBar {
+  background-color: transparent;
+  box-shadow: none;
+  border-bottom: 1px solid #EBEBEB;
+  justify-content: center;
+}
+
+.leftContainer {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  height: 100%;
+}
+
+.logoContainer p {
+  font-weight: bold;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #9D9D9D;
+}
+
+.optionsContainer {
+  display: flex;
+  gap: 0.5rem;
+  height: 4rem;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.optionsContainer p {
+  font-weight: bold;
+  
+}
+
+.clients {
+  border-bottom: 3px solid #9747FF;
+  color: #9747FF;
+  font-weight: bold;
+  transition: 0.5s;
+  padding: 1rem;
+  padding-top: 1.188rem;
+}
+
+.clients:hover {
+  background-color: #EBEBEB;
+}
+
+.optionsContainer div {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+.options {
+  font-weight: bold;
+  transition: 0.5s;
+  padding: 1rem;
+  color: #9D9D9D;
+}
+
+.options:hover {
+  background-color: #9747FF;
+  color: white;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rightContainer div {
+  background-color: #9747FF;
+  cursor: pointer;
+}
