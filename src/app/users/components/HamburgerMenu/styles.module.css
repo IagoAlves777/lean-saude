@@ -1,0 +1,54 @@
+.appBar {
+  background-color: transparent;
+  box-shadow: none;
+  border-bottom: 1px solid #EBEBEB;
+  justify-content: center;
+  height: 3rem;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.optionsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.clients {
+  padding: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: 1px solid #EBEBEB;
+  width: 100%;
+  text-align: center;
+  background-color: #9747FF;
+  color: white;
+}
+
+.options {
+  padding: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: 1px solid #EBEBEB;
+  width: 100%;
+  text-align: center;
+  color: #9747FF;
+}
+
+.logout {
+  padding: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: 1px solid #EBEBEB;
+  width: 100%;
+  text-align: center;
+  color: #E53E3E;
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}

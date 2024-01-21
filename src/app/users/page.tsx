@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Filters from './components/Filters';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import styles from './styles.module.css';
-import { Chip } from '@mui/material';
+import { Chip, useMediaQuery } from '@mui/material';
 import { useMemo, useState } from 'react';
 import { filteredList } from '@/utils/filteredList';
 import { User } from '@/types/user';
@@ -13,9 +13,11 @@ import { sortUsers } from '@/utils/sortUsers';
 import { IFilters } from '@/types/filter';
 import { dataMask } from '@/utils/dataFormat';
 import { filterUser } from '@/utils/filterUser';
+import CardList from './components/CardList';
 
 export default function Users() {
-  const { data: users } = useFetch<User[]>('users');
+  const { data: users } = useFetch<User[]>('users', { suspense: true });
+  const isMobile = useMediaQuery('(max-width:800px)');
 
   const [search, setSearch] = useState('');
   const [orderBy, setOrderBy] = useState('');
@@ -90,16 +92,26 @@ export default function Users() {
           setFilters={setFilter}
         />
         <div className={styles.tableContainer}>
-          <DataGrid
-            rows={filteredUser || []}
-            columns={columns}
-            initialState={{
-              pagination: {
-                paginationModel: { page: 0, pageSize: 10 },
-              },
-            }}
-            pageSizeOptions={[5, 10]}
-          />
+          {isMobile ? (
+            <CardList
+              columns={columns}
+              rows={filteredUser || []}
+              keyAccessor="id"
+              getTitle={(row: User) => row.name}
+              getSubTitle={(row: User) => `${row.name}`}
+            />
+          ) : (
+            <DataGrid
+              rows={filteredUser || []}
+              columns={columns}
+              initialState={{
+                pagination: {
+                  paginationModel: { page: 0, pageSize: 10 },
+                },
+              }}
+              pageSizeOptions={[5, 10]}
+            />
+          )}
         </div>
       </div>
     </div>

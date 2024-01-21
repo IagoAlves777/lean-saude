@@ -85,3 +85,24 @@
   color: white;
   opacity: 0.8;
 }
+
+
+@media screen and (max-width: 800px) {
+  .right {
+    display: none;
+  }
+
+  .left {
+    width: 100vw;
+    padding: 2rem;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+
+  .left {
+    
+    padding: 2rem;
+  }
+}

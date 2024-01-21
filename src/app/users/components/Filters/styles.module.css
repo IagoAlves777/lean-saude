@@ -13,6 +13,7 @@
 .filtersRow input {
   height: 1rem;
   width: 18.75rem;
+  max-width: 100vw;
 }
 
 .filtersSelect {
@@ -20,3 +21,24 @@
   align-items: center;
   gap: 2rem;
 }
+
+
+@media screen and (max-width: 800px) {
+  .container {
+    gap: 1rem;
+  }
+
+
+  .filtersRow {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    gap: 1rem;
+  }
+
+  .filtersRow div {
+    width: 90vw;
+  }
+}
+
