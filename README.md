@@ -26,3 +26,8 @@
 
 - **Login:** iago.alves@leansaude.com.br
 - **Senha:** leansaude
+
+## Observações
+
+- **Desafios** Acredito que apesar de simples foi bem legal construir essa aplicação, foi um ótimo teste me diverti muito fazendo
+- **Limitações** Algumas funcionalidades não ficaram bem do jeito que eu queria não implementei algumas coisas coisas que eu queria por ser a primeira vez que estou lidando com a versão 14 next, eu usei bastante next a um bom tempo atrás mas ele evoluiu bastante e acabei não acompanhando mas esse projeto me fez aprender bastante coisas sobre as novas versões do next.
